@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://badbeers.github.io/sitemap.xml
