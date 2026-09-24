@@ -1,0 +1,207 @@
+\documentclass{resume}
+
+\usepackage[left=0.75in,top=0.55in,right=0.75in,bottom=0.55in]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{changepage}
+\usepackage{fontawesome}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\definecolor{navyblue}{RGB}{0,54,123}
+\definecolor{lightgray}{RGB}{245,245,245}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=navyblue,
+  linkcolor=navyblue
+}
+
+\newcommand{\link}[2]{{\href{#1}{#2}}}
+\newcommand{\entry}[2]{#1 & #2 \tabularnewline}
+
+\newcommand{\tableEnv}[2]{%
+  \begin{rSection}{#1}
+    \begin{adjustwidth}{0.0in}{0.1in}
+      \begin{tabularx}{\linewidth}{@{} >{\bfseries}l @{\hspace{5ex}} X @{}}
+        #2
+      \end{tabularx}
+    \end{adjustwidth}
+  \end{rSection}
+}
+
+\name{\color{navyblue} Kai Ma}
+
+\begin{document}
+
+\printPersonalInfo{
+  \personalInfo{%
+    \tag{\faEnvelopeO}\info{\href{mailto:makai2024@shanghaitech.edu.cn}{makai2024@shanghaitech.edu.cn}}
+    \hspace{1em}
+    \tag{\faGraduationCap}\info{\href{https://scholar.google.com/citations?user=hr99haQAAAAJ&hl=en}{Google Scholar}}
+    \hspace{1em}
+    \tag{\faBarcode}\info{\href{https://orcid.org/0009-0001-4222-9749}{ORCID}}
+    \hspace{1em}
+    \tag{\faGlobe}\info{\href{https://badbeers.github.io/}{Homepage}}
+  }
+}
+
+%--- EDUCATION -------------------------------------------------------
+\begin{rSection}{Education}
+
+\begin{rSubsectionNoBullet}%
+  {\bf ShanghaiTech University}{China}%
+  {M.S. in Electronic Science and Technology}{Sep.\ 2024 -- Present}
+    \item \textit{Focus: Physical design; Design for manufacturing}
+    \item \textit{Supervisor: \href{https://true-genghao.github.io/genghao/}{Dr.\ Hao Geng}}
+\end{rSubsectionNoBullet}
+
+\vspace{0.25em}
+
+\begin{rSubsectionNoBullet}%
+  {\bf Central China Normal University}{China}%
+  {B.S. in Electronic Science and Technology}{Sep.\ 2020 -- Jun.\ 2024}
+    \item \textit{Focus: Single-photon detector with low time jitter; Neural network optimization}
+\end{rSubsectionNoBullet}
+
+\end{rSection}
+
+%--- PUBLICATIONS ----------------------------------------------------
+\begin{rSection}{Publications}
+\vspace{0.3em}
+
+\begin{itemize}[label={}, leftmargin=2.5em, itemsep=0.4em]
+  \item[{[\textbf{C1}]}] {\bf Kai Ma}, Zhen Wang, Hongquan He, Qi Xu, Tinghuan Chen, Hao Geng,
+    ``LMM-IR: Large-Scale Netlist-Aware Multimodal Framework for Static IR-Drop Prediction,''
+    \textit{ACM/IEEE Design Automation Conference} ({\bf DAC}), San Francisco, Jun.\ 2025.
+  \item[{[\textbf{C2}]}] {\bf Kai Ma}, Tianyi Li, Jiaqi Liu, Jingyi Yu, Hao Geng,
+    ``No Pixel, More Efficient: Multimodal Framework for Sub-nm Mask Process Correction,''
+    \textit{IEEE/ACM Design, Automation and Test in Europe} ({\bf DATE}), Verona, Italy, Apr.\ 2026.
+\end{itemize}
+
+\vspace{0.15em}
+
+\begin{itemize}[label={}, leftmargin=2.5em, itemsep=0.4em]
+  \item[{[\textbf{J1}]}] Tianyi Li, {\bf Kai Ma}(co-first author), Yiwen Wu, Jiaqi Liu, Jingyi Yu, Hao Geng,
+    ``Shot Splatting: Pioneering Shot-aware MPC for VSB Mask Data Preparation,''
+    \textit{IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems}
+    ({\bf TCAD}), doi: 10.1109/TCAD.2026.3667094.
+\end{itemize}
+
+\vspace{0.15em}
+
+\begin{itemize}[label={}, leftmargin=2.5em, itemsep=0.4em]
+  \item[{[\textbf{C3}]}] Wenxuan Dong, Tianyi Li, {\bf Kai Ma}(co-first author), Zhen Wang, Hanbin Dong, Nan Wang, Su Zheng, Xinyun Zhang, Jingyi Yu, Hao Geng,
+    ``UniMRC: A Differentiable Multimodal Framework for Unified Curvilinear-Manhattan Mask Rule Checking,''
+    \textit{IEEE/ACM International Conference on Computer-Aided Design} ({\bf ICCAD}), San Jose, Nov.\ 2026.
+
+  \vspace{0.15em}
+
+  \item[{[\textbf{C4}]}] Shenshuo Yao, Liuke Wang, Yuyang Chen, Yinuo Zhu, Zhen Wang, Jiajie Zhang, Tianyi Li, Yiwen Wu, Xinheng Li, {\bf Kai Ma}, Nan Wang, Wenxuan Dong, Xinyun Zhang, Jingyi Yu, Hao Geng,
+    ``Ariadne's Thread: A Multimodal Benchmark Weaving Point Solutions into Process Chains for AI-Driven Computational Lithography,''
+    \textit{IEEE/ACM International Conference on Computer-Aided Design} ({\bf ICCAD}), San Jose, Nov.\ 2026.
+\end{itemize}
+
+\end{rSection}
+
+%--- PATENT ----------------------------------------------------------
+\begin{rSection}{Patent}
+  Single-photon detector for visible and near-infrared light in the short wavelength
+  range with high count rate.
+  CN~216668998~U\@. Han Xue et al., \textbf{Kai Ma}, Qinglin Wu.
+\end{rSection}
+
+%--- OPEN SOURCE ----------------------------------------------------
+\begin{rSection}{Open-Source Repositories}
+  \href{https://github.com/TorchOPC/TorchLitho}{\textbf{TorchLitho}} ---
+  Contributor to an open-source differentiable computational lithography framework
+  (\textbf{226~stars}); implements the first open-source differentiable Abbe / Hopkins
+  lithography imaging model and analytical resist development model,
+  enabling GPU-accelerated, gradient-based optimisation of Resolution Enhancement
+  Techniques (RETs). \textit{(SPIE Advanced Lithography, 2024)}
+\end{rSection}
+
+%--- RESEARCH EXPERIENCE ---------------------------------------------
+\begin{rSection}{Research Experience}
+
+\begin{rSubsection}%
+  {Multimodal EDA: IR-Drop Prediction \& Mask Process Correction}{Sep.\ 2023 -- Present}%
+  {Supervisor: \href{https://true-genghao.github.io/genghao/}{Dr.\ Hao Geng}}{ShanghaiTech University, China}
+  \item Proposed \textbf{LMM-IR}, a multimodal framework for static IR-drop prediction that encodes
+        large-scale SPICE netlists ($>$100K nodes) as 3D point clouds via a novel Large-scale Netlist
+        Transformer (LNT), then fuses them with circuit image features through cross-attention;
+        achieved the best F1 score and lowest MAE among ICCAD~2023 contest winners. \textit{(DAC 2025)}
+  \item Developed a multimodal \textbf{Mask Process Correction (MPC)} framework that represents GDS
+        mask layouts as sparse point clouds and conditions correction on e-beam lithography resist
+        images via a ControlNet-inspired architecture; achieved sub-nm EPE accuracy comparable
+        to commercial tools at $>$200$\times$ speedup on large-scale layouts. \textit{(DATE 2026)}
+  \item Proposed \textbf{Shot Splatting}, a unified MPC and shot-fracturing framework; jointly optimises shot geometry, position, size, and dose via
+        differentiable Lam\'{e}-curve kernels and EBL simulation, eliminating separate MRC
+        post-processing and reducing EPE by $\sim$79--86\% over the no-MPC baseline. \textit{(TCAD)}
+
+  \item Proposed \textbf{OmniShot}, a shot-centric generative framework for Mask-Wafer
+        Co-Optimization (MWCO) that unifies OPC, MPC, and shot fracturing into a single
+        inference step; developed a CUDA-accelerated soft rasterizer and differentiable EBL
+        \& optical lithography simulators for physics-aware end-to-end training; achieved
+        $>$40\% lower EPE, $>$40\% fewer shots, and $5\times$ faster runtime over strong
+        baselines on complex benchmarks and a full-chip DNN accelerator.
+\end{rSubsection}
+
+
+\begin{rSubsection}%
+  {Low Time Jitter Single-Photon Detector}{Sep.\ 2021 -- Mar.\ 2023}%
+  {Supervisor: Prof.\ Qinglin Wu}{Central China Normal University, China}
+  \item Developed a novel constant fraction timing discrimination method to optimise
+        single-photon detection time jitter, achieving a \textbf{50\%} reduction.
+  \item Designed an innovative signal processing circuit and conducted end-to-end
+        performance validation.
+\end{rSubsection}
+
+% \begin{rSubsection}%
+%   {Neural Network Optimisation for Filter Design}{Oct.\ 2022 -- May 2023}%
+%   {Advisor: Dr.\ Jing Jin}{Central China Normal University, China}
+%   \item Applied vector fitting to generate high-quality training and test data,
+%         ensuring accuracy across diverse filter configurations.
+%   \item Implemented a back-deduction module in NeuroModeler\,Plus via the
+%         quasi-Newton algorithm, achieving precise control over transfer-function
+%         coefficient ordering.
+%   \item Collaborated closely with the research team to fine-tune the optimisation
+%         pipeline, delivering efficient and accurate filter designs for multiple
+%         applications.
+% \end{rSubsection}
+
+\end{rSection}
+
+%--- HONOURS & SCHOLARSHIPS ------------------------------------------
+\tableEnv{Awards \& Certifications}{
+  \entry{Sep. 2024}{Graduate Academic Scholarship, ShanghaiTech University}
+  
+  \entry{Jul. 2024}{Digital Implementation \& Sign-off Full-Flow Certification,
+    Cadence Design Systems --- delivered by \textit{Miao Liu},
+    Sr.\ Group Director.}
+    
+  \entry{Nov. 2022}{National Encouragement Scholarship, Ministry of Education, China 
+  
+  \em{— top 5\% of undergraduates nationally}}
+  \entry{Nov. 2021}{National Encouragement Scholarship, Ministry of Education, China 
+  
+  \em{— top 5\% of undergraduates nationally}}
+  \entry{Dec. 2021}{Chinese Mathematics Competitions (CMC) --- Second Prize}
+}
+
+%--- TECHNICAL SKILLS ------------------------------------------------
+\tableEnv{Technical Skills}{
+  \entry{Programming}{Python \textperiodcentered\ C/C++ \textperiodcentered\ MATLAB \textperiodcentered\ \LaTeX \textperiodcentered\ Linux}
+  \entry{Expertise}{Deep Learning \textperiodcentered\ Virtuoso \textperiodcentered\ Numerical Analysis}
+}
+
+%--- CONFERENCE ATTENDANCE -------------------------------------------
+\tableEnv{Conference Attendance}{
+  \entry{DAC 2025}{ACM/IEEE Design Automation Conference, San Francisco, USA, Jun.\ 2025({\bf Talk \& Poster})}
+  \entry{DATE 2026}{IEEE/ACM Design, Automation and Test in Europe, Verona, Italy, Apr.\ 2026({\bf Talk \& Poster})}
+  \entry{IWAPS 2025}{International Workshop on Advanced Patterning Solutions, Shenzhen, China, 2025.
+    Attended sessions on advanced lithography and mask patterning technologies.}
+}
+
+\end{document}
