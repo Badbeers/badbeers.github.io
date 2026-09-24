@@ -1,0 +1,3 @@
+const themeButton=document.querySelector('.theme');
+function syncTheme(){const dark=document.documentElement.dataset.theme==='dark';themeButton.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');themeButton.setAttribute('aria-pressed',String(dark));themeButton.firstElementChild.textContent=dark?'☀':'☾';document.querySelector('meta[name="theme-color"]').content=dark?'#151222':'#ffffff'}
+themeButton.addEventListener('click',()=>{const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;try{localStorage.setItem('kai-theme',theme)}catch(e){}syncTheme()});syncTheme();document.getElementById('year').textContent=new Date().getFullYear();
